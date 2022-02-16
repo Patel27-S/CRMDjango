@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Entry Form for New Leads 
+        </title>
+        <style>
+            .lead{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 6px;
+                padding-right: 6px;
+                margin-top: 10px;
+                background-color: f6f6f6;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+          <h1>Entry form for Lead :</h1>
+    </hr>
+        <form method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
