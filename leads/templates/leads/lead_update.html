@@ -1,0 +1,17 @@
+
+{% extends 'base.html'%}
+
+{% block title%}
+Update Form
+{% endblock title %}
+
+{% block body%}
+        <h1><strong>Update form </strong> for <strong>{{lead.first_name}} {{lead.last_name}}:</strong></h1><br>
+    </hr>
+        <form method="post">
+          {% csrf_token %}
+          {{form.as_p}}<br>
+          <button type="submit"><strong>Submit<strong></button>
+        </form>
+    <p><a href="{% url "leads:lead_detail" lead.pk%}">Go back to details</a></p>
+{% endblock body%}
